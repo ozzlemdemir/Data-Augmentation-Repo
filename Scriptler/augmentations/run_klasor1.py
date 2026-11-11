@@ -27,7 +27,7 @@ ROOT = Path(r"C:\Users\Lenovo\Desktop\Data-Augmentation-2026")
 
 # DİKKAT: Klasör adı bilgisayarınızdaki adla birebir aynı olmalı.
 INPUT_DIR = ROOT / "Klasor_1(Johsongrassli)" / "train"   # içinde images/ ve labels/
-OUTPUT_DIR = ROOT / "augmented" / "klasor_1"
+OUTPUT_DIR = ROOT / "augmented_data" / "klasor_1"
 
 LIMIT = None   # Deneme için 20 yazın (her teknik sadece ilk 20 görseli işler)
 

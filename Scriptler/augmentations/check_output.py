@@ -41,8 +41,8 @@ ROOT = Path(r"C:\Users\Lenovo\Desktop\Data-Augmentation-2026")
 # İçinde images/ ve labels/ olan, kontrol edilecek klasörler.
 # Birleştirme bitince şunları da ekleyebilirsiniz:  ROOT / "final_dataset" / "train"
 CHECK_FOLDERS = [
-    ROOT / "augmented" / "klasor_1",
-    ROOT / "augmented" / "klasor_2",
+    ROOT / "augmented_data" / "klasor_1",
+    ROOT / "augmented_data" / "klasor_2",
 ]
 
 # Augmentation eki İÇERMEMESİ gereken klasörler (val ve test). Boş bırakılabilir.
@@ -55,7 +55,9 @@ PREVIEW_MAX_SIDE = 1600                # önizleme görselinin en uzun kenarı (
 SEED = 0                               # aynı seed = aynı örnekler seçilir
 
 IMAGE_EXTS = {".jpg", ".jpeg", ".png"}
-SUFFIXES = ["_flip", "_scale", "_rot", "_shear", "_hsv", "_shadow", "_crop"]
+# Uzun (birleşik) ekler ÖNCE gelmeli, yoksa "_rot_hsv" dosyası sadece "hsv" sayılır.
+SUFFIXES = ["_flip_hsv", "_scale_hsv", "_rot_hsv", "_shear_hsv", "_shadow_hsv", "_crop_hsv",
+            "_flip", "_scale", "_rot", "_shear", "_hsv", "_shadow", "_crop"]
 
 CLASS_NAMES = ["Male", "Female", "Silk", "Johnsongrass"]        # sınıf 0, 1, 2, 3
 CLASS_COLORS = [(255, 0, 0), (0, 0, 255), (0, 255, 255), (0, 200, 0)]  # BGR renkler
